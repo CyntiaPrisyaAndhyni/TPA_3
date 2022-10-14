@@ -1,0 +1,123 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
+
+*{
+    box-sizing: border-box;      
+}
+
+:root{
+    --primary-color:rgb(49, 121, 81);
+    --secondary-color:rgb(31, 197, 106);
+}
+
+body{
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--secondary-color);
+    margin: 0;
+}
+
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    color: rgb(0, 0, 0);
+    background-color: var(--secondary-color);
+}
+
+.search{
+    border: 2px solid var(--primary-color);
+    padding: 0.5rem 1rem;
+    border-radius: 50px;
+    text-align: center;
+    font-size: 1rem;
+    color: rgb(0, 0, 0);
+    font-family: inherit;
+    background-color: transparent;
+}
+
+.search:focus{
+    outline: 0;
+    background-color: var(--primary-color);
+}
+
+.search::placeholder{
+    color:rgb(221, 255, 230);
+}
+
+
+
+#main{
+    background-color: var(--primary-color);
+    display: flex;
+    flex-wrap:wrap;
+}
+
+.movie{
+     width: 300px;
+     margin: 1rem;
+     border-radius: 4px;
+     box-shadow: 1px 5px 5px 0.5px rgb(186, 241, 201);
+     background-color: var(--secondary-color);
+     position:relative;
+     overflow: hidden;
+}
+
+.movie img{
+    width:100%;
+}
+
+.info-movie1{
+    color: rgb(0, 0, 0);
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem 0.7rem 0.5rem 0.7rem ;
+    letter-spacing: 0.7px;
+    
+}
+
+.info-movie1 span{
+    background-color: rgb(204, 250, 217);
+    padding:0.25rem 0.5rem;
+    border-radius:4px;
+}
+
+.info-movie1 span.green{
+    color:green;
+}
+
+.info-movie1 span.orange{
+    color:orange;
+}
+
+.info-movie1 span.red{
+    color:red;
+}
+
+.info-movie2{
+    color: rgb(0, 0, 0);
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem 0.7rem 0.5rem 0.7rem ;
+    letter-spacing: 0.7px;
+}
+
+.desc-movie{
+    position: absolute;
+    left: 0;
+    right:0;
+    bottom:0;
+    background-color: rgb(197, 255, 238);
+    padding: 1rem;
+    max-height: 100%;
+    transform: translateY(101%);
+    transition: transform 0.3s ease-in;
+    border-radius: 3px;
+}
+
+.movie:hover .desc-movie{
+    transform:translateY(0);
+}
+
+
